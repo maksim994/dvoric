@@ -1,0 +1,27 @@
+:root {
+  // base
+  --m-font-family: 'Manrope', system-ui, sans-serif;
+  --m-font-family-title: 'Manrope', system-ui, sans-serif;
+
+  --bg-gray: #F4F5F7;
+  --bg-white: #FFFFFF;
+
+  --txt-black: #000000;
+  --txt-dark-gray: #707070;
+  --txt-gray: #A2A2A2;
+  --txt-white: #FFFFFF;
+
+  --black: #000;
+  --light-gray: #F6F6F6;
+  --green: #579E15;
+  --beige: #E9E7E6;
+  --white: #FFFFFF;
+
+  --gap: 20px;
+  --animation: all 0.25s ease-out;
+
+
+}
+
+$content-width: 1440px;
+$container-offset: 30px;

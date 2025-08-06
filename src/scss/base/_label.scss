@@ -1,0 +1,63 @@
+.label {
+  display: inline;
+  padding: em(3) em(7) em(4);
+  font-size: em(14);
+  line-height: 1;
+  color: var(--white);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background: #999;
+
+  a{
+    color: inherit;
+  }
+
+  &.label-default {
+    background-color: #999;
+  }
+
+  &.label-primary {
+    background-color: #ccc;
+  }
+
+  &.label-success {
+    background-color: #5cb85c;
+  }
+
+  &.label-info {
+    background-color: #365edc;
+  }
+
+  &.label-warning {
+    background-color: #f0ad4e;
+  }
+
+  &.label-danger {
+    background-color: #d9534f;
+  }
+
+  &.label-hit {
+    background-color: #ed673c;
+  }
+
+  &.label-recommend {
+    background-color: #925aec;
+  }
+
+  &.label-new{
+    background-color: #31b82f;
+  }
+
+}
+
+// .element-count
+.element-count{
+  display: inline-block;
+  border: 1px solid var(--gray-10);
+  color: var(--black);
+  padding: 4px 6px;
+  font-size: 14px;
+  border-radius: var(--border-radius);
+}

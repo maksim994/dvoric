@@ -1,0 +1,25 @@
+<header class="header">
+    <div class="wrapper">
+        <div class="header-wrapper d-f ai-c jc-sb">
+            @include('../base/logo.html', {
+                'class': 'header-logo',
+                'descriptor': true
+            })
+
+            <nav class="header-menu">
+                <ul class="header-menu-list list-reset d-f ai-c gap">
+                    <li><a href="">Ассортимент</a></li>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Оплата</a></li>
+                    <li><a href="">Анонсы</a></li>
+                    <li><a href="">График работы</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-phone">
+                <a href="#">+7 (999) 929-55-41</a>
+            </div>
+        </div>
+</header>
+
+@include('./header/header-mobile.html')

@@ -1,0 +1,9 @@
+.license-list-inner{
+
+  // .license-list-inner__section-content
+  &__section-content{
+    &:not(:last-child){
+      margin-bottom: em(80);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.header{
+  position: relative;
+  z-index: 10;
+
+  // .header-wrapper
+  &-wrapper{
+    padding: em(20) 0;
+  }
+
+  // .header-logo
+  &-logo{
+    max-width: 400px;
+  }
+
+  // .header-menu
+  &-menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    a{
+      color: var(--txt-white);
+      font-size: em(18);
+      font-weight: 500;
+
+      &:hover{
+        color: var(--green);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // .header-phone
+  &-phone{
+    color: var(--white);
+    font-weight: 500;
+    font-size: 24px
+  }
+
+}
+
+
+.header-search{
+
+  // .header-search-wrapper
+  &-wrapper{
+    flex: 1;
+  }
+
+  // .header-search-form
+  &-form{
+    position: relative;
+  }
+
+  // .header-search-inpu
+  &-input{
+
+  }
+
+  // .header-search-btn
+  &-btn{
+    position: absolute;
+    top: 50%;
+    right: em(8);
+    transform: translateY(-50%);
+  }
+}

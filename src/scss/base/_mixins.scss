@@ -1,0 +1,122 @@
+@use "sass:math"; // You can use "sass:math"
+
+$vw-viewport: 1420;
+
+@function vw($font) {
+  $vw-context: $vw-viewport * 0.01 * 1px;
+  @return math.div($font, $vw-context) * 1vw;
+}
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Не используйте единицы измерения при работе с функцией rem()! Передавайте аргументом только числа.'
+  }
+}
+
+@function em($size, $base: 16) {
+  @return math.div($size, $base) + em;
+}
+
+@mixin color($name, $color) {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+
+  .color-#{$name} {
+    color: $color !important;
+  }
+
+  .br-#{$name} {
+    border-width: 1px;
+    border-color: $color;
+    border-style: solid;
+  }
+}
+
+@mixin media($Device) {
+  @media screen and (max-width: map-get($breakpoints, $Device) - 1px) {
+    @content;
+  }
+}
+
+@mixin z-index($key) {
+  z-index: map-get($z-index, $key);
+}
+
+
+@mixin project-classes($screen-name: "") {
+  .d#{$screen-name}-n {
+    display: none !important;
+  }
+  .d#{$screen-name}-b {
+    display: block !important;
+  }
+  .d#{$screen-name}-f {
+    display: flex !important;
+  }
+  .fw#{$screen-name}-w {
+    flex-wrap: wrap !important;
+  }
+  .fw#{$screen-name}-n {
+    flex-wrap: nowrap !important;
+  }
+  .fd#{$screen-name}-c {
+    flex-direction: column !important;
+  }
+  .fd#{$screen-name}-r {
+    flex-direction: row !important;
+  }
+  .fb#{$screen-name}-100 {
+    flex-basis: 100% !important;
+  }
+  .ai#{$screen-name}-c {
+    align-items: center !important;
+  }
+  .ai#{$screen-name}-fs {
+    align-items: flex-start !important;
+  }
+  .ai#{$screen-name}-fe {
+    align-items: flex-end !important;
+  }
+  .as#{$screen-name}-fs {
+    align-self: flex-start !important;
+  }
+  .as#{$screen-name}-fe {
+    align-self: flex-end !important;
+  }
+  .as#{$screen-name}-c {
+    align-self: center !important;
+  }
+  .jc#{$screen-name}-fe {
+    justify-content: flex-end !important;
+  }
+  .jc#{$screen-name}-fs {
+    justify-content: flex-start !important;
+  }
+  .jc#{$screen-name}-c {
+    justify-content: center !important;
+  }
+  .jc#{$screen-name}-sb {
+    justify-content: space-between !important;
+  }
+}
+
+@include color('brand-500', var(--brand-500));
+@include color('brand-400', var(--brand-400));
+@include color('brand-300', var(--brand-300));
+@include color('brand-200', var(--brand-200));
+@include color('brand-100', var(--brand-100));
+@include color('brand-50', var(--brand-50));
+
+@include color('gray-80', var(--gray-80));
+@include color('gray-60', var(--gray-60));
+@include color('gray-40', var(--gray-40));
+@include color('gray-20', var(--gray-20));
+@include color('gray-10', var(--gray-10));
+@include color('gray-5', var(--gray-5));
+
+@include color('black', var(--black));
+
+@include project-classes;
