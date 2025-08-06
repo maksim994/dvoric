@@ -65,12 +65,12 @@
 
   // .section-bg-grey
   &-bg-grey {
-    background-color: var(--gray-5);
+    background-color: #E9E7E6;
   }
 
   // .section-bg-grey-full
   &-bg-grey-full{
-    box-shadow: 0 0 0 100vmax var(--gray-5);
+    box-shadow: 0 0 0 100vmax #E9E7E6;
     clip-path: inset(0 -100vmax);
   }
 

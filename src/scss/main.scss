@@ -83,13 +83,14 @@ body {
   &-utp{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     // .hero-utp__wrapper
     &__wrapper{
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      align-items: flex-start;
       gap: 20px;
       //row-gap: 40px;
       max-width: 90%;
@@ -97,6 +98,13 @@ body {
 
     // .hero-utp-icons
     &-icons{
+      width: 80px;
+      height: 80px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       .svg{
         color: var(--white);
       }
@@ -460,6 +468,13 @@ body {
 }
 
 .payment{
+  
+  // .payment-section
+  &-section{
+    padding: 40px;
+    background-color: #E9E7E6;
+    border-radius: 20px;
+  }
 
   // .payment-wrapper
   &-wrapper{
@@ -557,7 +572,8 @@ body {
   &-value{
     font-size: 28px;
     line-height: 1.2;
-    font-weight: 300;
+    //font-weight: 300;
+    font-weight: 500;
 
     a{
       display: block;
@@ -599,6 +615,11 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 
+
+  // .footer-bottom
+  &-top{
+    margin-bottom: 20px;
+  }
 
   // .footer-bottom
   &-bottom{
