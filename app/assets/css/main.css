@@ -11518,6 +11518,11 @@ body {
   gap: 20px;
   row-gap: 40px;
 }
+@media (max-width: 1024px) {
+  .contacts-inner {
+    row-gap: 20px;
+  }
+}
 .contacts-item:last-child {
   grid-column: 1/-1;
 }
@@ -11532,6 +11537,11 @@ body {
   line-height: 1.2;
   font-weight: 500;
 }
+@media (max-width: 1280px) {
+  .contacts-value {
+    font-size: 24px;
+  }
+}
 .contacts-value a {
   display: block;
 }
@@ -11541,6 +11551,13 @@ body {
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+@media (max-width: 991px) {
+  .contacts-value .work-schedule {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
 }
 .contacts-value .work-schedule-item {
   display: -webkit-box;
@@ -11589,7 +11606,7 @@ body {
   padding: 40px;
   border-radius: 20px;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   position: relative;
   overflow: hidden;
 }
